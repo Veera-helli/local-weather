@@ -2,19 +2,37 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Deployed on Netlify
+## Deployed on Netlify
 
 see the app in action: https://veeras-local-weather.netlify.app/
 
-# Currently you can ...
+## Currently you can ...
 
 - Search and view weather forecasts for cities around the world
 
-# Technologies used
+## Technologies used
 
 - Create React App
 - JavaScript
 - Bootstrap CSS library
+
+## Screenshots
+
+### Search Card
+
+![search card](./screenshots/searchCard.png)
+
+### Weather Card
+
+![Weather card](./screenshots/weatherCard.png)
+
+### Error alerts
+
+![Location error](./screenshots/LocationError.png)
+When user inputs an invalid location name
+
+![Connection error](./screenshots/ConnectionError.png)
+When connection to the AccuWeather API fails
 
 ## Scripts to use
 
