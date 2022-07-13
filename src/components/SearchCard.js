@@ -4,8 +4,8 @@ const SearchCard = ({ handleSearch, setLocation, alert }) => {
   return (
     <div className='row d-flex justify-content-center align-items-center h-100'>
       <div className='col-10 col-xl-8'>
-        <h1 className='fs-1 ms-sm-4 top-text light-shadow'>
-          Looking for weather info?
+        <h1 className='fs-1 ms-2 ms-sm-4 top-text light-shadow'>
+          Looking for weather forecasts?
         </h1>
         <div className='card border-0 text-center'>
           <h1 className='fs-2 fw-light pt-4 light-shadow'>
@@ -15,7 +15,7 @@ const SearchCard = ({ handleSearch, setLocation, alert }) => {
             <div className='d-flex justify-content-center align-items-center'>
               <input
                 className='w-75 m-4 p-2 fs-4'
-                placeholder='Enter the name of the city'
+                placeholder='Enter city name'
                 onChange={({ target }) => setLocation(target.value)}
               ></input>
             </div>
