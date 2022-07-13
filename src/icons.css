@@ -1,0 +1,130 @@
+.wicon {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: calc(75px * 3);
+  height: calc(45px * 3);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 800px) {
+  .wicon {
+    width: calc(75px * 4);
+    height: calc(45px * 4);
+  }
+}
+
+#icon_1 {
+  background-image: url(./icons/1.png);
+}
+
+#icon_2 {
+  background-image: url(./icons/2.png);
+}
+
+#icon_3 {
+  background-image: url(./icons/3.png);
+}
+
+#icon_4 {
+  background-image: url(./icons/4.png);
+}
+
+#icon_5 {
+  background-image: url(./icons/5.png);
+}
+
+#icon_6 {
+  background-image: url(./icons/6.png);
+}
+
+#icon_7 {
+  background-image: url(./icons/7.png);
+}
+
+#icon_8 {
+  background-image: url(./icons/8.png);
+}
+
+#icon_11 {
+  background-image: url(./icons/11.png);
+}
+
+#icon_12 {
+  background-image: url(./icons/12.png);
+}
+
+#icon_13 {
+  background-image: url(./icons/13.png);
+}
+
+#icon_14 {
+  background-image: url(./icons/14.png);
+}
+
+#icon_15 {
+  background-image: url(./icons/15.png);
+}
+
+#icon_16 {
+  background-image: url(./icons/16.png);
+}
+
+#icon_17 {
+  background-image: url(./icons/17.png);
+}
+
+#icon_18 {
+  background-image: url(./icons/18.png);
+}
+
+#icon_19 {
+  background-image: url(./icons/19.png);
+}
+
+#icon_20 {
+  background-image: url(./icons/20.png);
+}
+
+#icon_21 {
+  background-image: url(./icons/21.png);
+}
+
+#icon_22 {
+  background-image: url(./icons/22.png);
+}
+
+#icon_23 {
+  background-image: url(./icons/23.png);
+}
+
+#icon_24 {
+  background-image: url(./icons/24.png);
+}
+
+#icon_25 {
+  background-image: url(./icons/25.png);
+}
+
+#icon_26 {
+  background-image: url(./icons/26.png);
+}
+
+#icon_29 {
+  background-image: url(./icons/29.png);
+}
+
+#icon_30 {
+  background-image: url(./icons/30.png);
+}
+
+#icon_31 {
+  background-image: url(./icons/31.png);
+}
+
+#icon_32 {
+  background-image: url(./icons/32.png);
+}
