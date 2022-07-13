@@ -72,7 +72,6 @@ const App = () => {
       console.log('going to service');
       const cityWeather = await weatherService.getInfo(location);
       console.log('not caught');
-      console.log(`>>> ${cityWeather}`);
       if (cityWeather.DailyForecasts) {
         console.log('valid data');
         setWeather(cityWeather);

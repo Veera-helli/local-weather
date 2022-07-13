@@ -4,9 +4,13 @@ const SearchCard = ({ handleSearch, setLocation, alert }) => {
   return (
     <div className='row d-flex justify-content-center align-items-center h-100'>
       <div className='col-10 col-xl-8'>
-        <h1 className='fs-1 fw-light ms-sm-4'>Looking for weather info?</h1>
+        <h1 className='fs-1 ms-sm-4 top-text light-shadow'>
+          Looking for weather info?
+        </h1>
         <div className='card border-0 text-center'>
-          <h1 className='fs-2 fw-light pt-4'>Search for a city:</h1>
+          <h1 className='fs-2 fw-light pt-4 light-shadow'>
+            Search for a city:
+          </h1>
           <form onSubmit={handleSearch} className='w-100'>
             <div className='d-flex justify-content-center align-items-center'>
               <input
