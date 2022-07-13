@@ -29,9 +29,11 @@ see the app in action: https://veeras-local-weather.netlify.app/
 ### Error alerts
 
 ![Location error](./screenshots/LocationError.png)
+
 When user inputs an invalid location name
 
 ![Connection error](./screenshots/ConnectionError.png)
+
 When connection to the AccuWeather API fails
 
 ## Scripts to use
