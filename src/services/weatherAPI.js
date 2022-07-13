@@ -20,7 +20,7 @@ const getInfo = async (location) => {
       const req2 = await axios.get(
         `${baseUrl}/forecasts/v1/daily/1day/${req1.data[0]?.Key}?apikey=${unimportant}&metric=true`
       );
-      return req2.data;
+      return { weatherData: req2.data, locationData: req1.data };
     } catch {
       // currently there is no reason to differentiate with the two catch errors
       return 'data error';

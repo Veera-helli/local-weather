@@ -1,10 +1,14 @@
-const WeatherCard = ({ resetSearch, location, weather }) => {
+import WeatherTitle from './WeatherTitle';
+import WeatherForecast from './WeatherForecast';
+
+const WeatherCard = ({ resetSearch, location, data }) => {
   const iconList = [...Array(33).keys()].filter(
     (icon) => ![0, 9, 10, 27, 28].includes(icon)
   ); // the AccuWeather icons list doesn't contain all numbers in the range for some odd reason
 
-  const iconIndex = weather?.DailyForecasts[0]?.Day?.Icon;
+  const iconIndex = data?.weatherData?.DailyForecasts[0]?.Day?.Icon;
   const icon_id = `icon_${iconIndex}`;
+  const iconFound = iconList.includes(iconIndex);
 
   return (
     <div className='row d-flex justify-content-center align-items-center h-100'>
@@ -14,26 +18,12 @@ const WeatherCard = ({ resetSearch, location, weather }) => {
         </h1>
         <div className='card border-0 text-center p-5'>
           <div className='w-100'>
-            <h1 className='display-4 fw-bold darker-shadow' id='location-name'>
-              {location}
-            </h1>
-            <h2 className='fs-3 fw-light light-shadow' id='phrase'>
-              {`${weather?.DailyForecasts[0]?.Day?.IconPhrase}` || 'not found'}
-            </h2>
-            <div className='d-md-flex align-items-center justify-content-center'>
-              <div className='d-flex align-items-center justify-content-center'>
-                <div id={icon_id} className='wicon'>
-                  {!iconList.includes(iconIndex) && 'icon not found'}
-                </div>
-              </div>
-              <h2
-                id='temperature'
-                className='display-1 text-nowrap darker-shadow'
-              >
-                {`${weather?.DailyForecasts[0]?.Temperature?.Maximum?.Value}°C` ||
-                  'not found'}
-              </h2>
-            </div>
+            <WeatherTitle locationData={data?.locationData[0]} />
+            <WeatherForecast
+              weatherData={data?.weatherData?.DailyForecasts[0]}
+              icon_id={icon_id}
+              iconFound={iconFound}
+            />
           </div>
         </div>
         <div className='w-100 text-center'>

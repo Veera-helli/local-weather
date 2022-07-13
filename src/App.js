@@ -6,12 +6,12 @@ import { useState, useEffect } from 'react';
 
 const App = () => {
   const [location, setLocation] = useState('');
-  const [weather, setWeather] = useState(null);
+  const [data, setData] = useState(null);
   const [alert, setAlert] = useState('');
 
-  // Alert disappears after 4 seconds
+  // Alert disappears after 5 seconds
   useEffect(() => {
-    if (alert !== '') setTimeout(() => setAlert(''), 4000);
+    if (alert !== '') setTimeout(() => setAlert(''), 5000);
   }, [alert]);
 
   const handleSearch = async (event) => {
@@ -19,8 +19,8 @@ const App = () => {
     try {
       const cityWeather = await weatherService.getInfo(location);
 
-      if (cityWeather?.DailyForecasts) {
-        setWeather(cityWeather);
+      if (cityWeather?.weatherData?.DailyForecasts) {
+        setData(cityWeather);
       } else if (cityWeather === 'Invalid location') {
         setAlert('Location not found. Please check for typos.');
       } else if (cityWeather === 'data error') {
@@ -33,18 +33,18 @@ const App = () => {
 
   const resetSearch = async (event) => {
     event.preventDefault();
-    setWeather(null);
+    setData(null);
   };
 
   return (
     <div>
       <NavigationBar />
       <div id='content'>
-        {weather ? (
+        {data ? (
           <WeatherCard
             resetSearch={resetSearch}
             location={location}
-            weather={weather}
+            data={data}
           />
         ) : (
           <SearchCard
