@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const getInfo = async (location) => {
-  const baseUrl = 'http://dataservice.accuweather.com'; // remember to change this
+  const baseUrl = 'https://dataservice.accuweather.com'; // remember to change this
   const API_KEY = 'FQhDhttKGhz2VTiKYKN3WP6RSAT6qEcs';
 
   const req1 = await axios
