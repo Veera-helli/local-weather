@@ -11,24 +11,22 @@ const WeatherCard = ({ resetSearch, location, data }) => {
   const iconFound = iconList.includes(iconIndex);
 
   return (
-    <div className='row d-flex justify-content-center align-items-center h-100'>
-      <div className='col-10 col-xl-8'>
+    <div className='row justify-content-center'>
+      <div className='col-10 col-lg-8'>
         <h1 className='fs-1 ms-sm-4 top-text light-shadow'>
           Here's your data!
         </h1>
         <div className='card border-0 text-center p-5'>
-          <div className='w-100'>
-            <WeatherTitle locationData={data?.locationData[0]} />
-            <WeatherForecast
-              weatherData={data?.weatherData?.DailyForecasts[0]}
-              icon_id={icon_id}
-              iconFound={iconFound}
-            />
-          </div>
+          <WeatherTitle locationData={data?.locationData[0]} />
+          <WeatherForecast
+            weatherData={data?.weatherData?.DailyForecasts[0]}
+            icon_id={icon_id}
+            iconFound={iconFound}
+          />
         </div>
-        <div className='w-100 text-center'>
+        <div className='row justify-content-center'>
           <button
-            className='btn btn-primary m-4 mb-5 px-4 fs-5'
+            className='col-4 btn btn-primary m-4 fs-5'
             id='reset-button'
             onClick={resetSearch}
           >

@@ -10,7 +10,13 @@
   justify-content: center;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (max-width: 768px) {
+  .wicon {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .wicon {
     width: calc(75px * 4);
     height: calc(45px * 4);
